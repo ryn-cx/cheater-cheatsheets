@@ -7,5 +7,19 @@
         "type": "string"
       }
     }
+  },
+  {
+    "description": "Upgrade to head",
+    "command": "uv run alembic upgrade head"
+  },
+  {
+    "description": "Downgrade by N versions",
+    "command": "uv run alembic downgrade -<number_of_rollbacks>",
+    "params": {
+      "number_of_rollbacks": {
+        "type": "integer",
+        "description": "Number of versions to roll back"
+      }
+    }
   }
 ]
